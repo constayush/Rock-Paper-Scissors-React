@@ -117,7 +117,7 @@ else{
 
 
 
-        <div className=' w-[30rem] h-fit lg:h-full  rounded-lg flex flex-col justify-center items-center'>
+        <div className=' w-[15rem] h-fit lg:h-full  rounded-lg flex flex-col justify-center items-center'>
 
         <Link to='/'>
   <button class="button-89 m-3" role="button">Back</button></Link>

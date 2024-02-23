@@ -56,7 +56,7 @@ function Home() {
         </button>
       </div></Link>
 
-<p className='text-white'>made by ayush ^_____^</p>
+<p className='text-white text-nowrap'>made by ayush ^_____^</p>
 
 
     </div>
