@@ -7,8 +7,8 @@ function Play() {
   let [userScore, setUserScore] = useState(0)
   let [compScore, setCompScore] = useState(0)
   let random = Math.round(Math.random() * 2);
-let bestof = 3;
-let [displayText, setDisplayText] =useState('choose your move')
+  let bestof = 3;
+  let [displayText, setDisplayText] = useState('choose your move')
   function handleClick(e) {
 
     setplayCred(playCred + 1)
@@ -29,32 +29,60 @@ let [displayText, setDisplayText] =useState('choose your move')
   }
 
   function evalScore(result) {
-if(playCred >= bestof){setDisplayText("limit reached")}
-else{
-    if (result == 'draw') { setDisplayText("snap!, its a draw") }
-    else if (result == 'win') { 
-      setDisplayText("you win, choose next")
-      setUserScore(userScore + 1) 
+    if (playCred >= bestof) { setDisplayText("limit reached") }
+    else {
+      if (result == 'draw') { setDisplayText("snap!, its a draw") }
+      else if (result == 'win') {
+        setDisplayText("you win, choose next")
+        setUserScore(userScore + 1)
+      }
+      else if (result == 'loose') {
+        setDisplayText("you loose, choose next")
+        setCompScore(compScore + 1)
+      }
     }
-    else if (result == 'loose') { 
-      setDisplayText("you loose, choose next")
-      setCompScore(compScore + 1) 
-    }
-}
   }
+
+
+  function updateStyles(compMove) {
+
+    if (compMove == 'rock') {
+      document.querySelector(`.crock`).style.backgroundColor = 'black'
+      document.querySelector(`.cpaper`).style.backgroundColor = ''
+      document.querySelector(`.cscissors`).style.backgroundColor = ''
+    }
+    if (compMove == 'paper') {
+      document.querySelector(`.crock`).style.backgroundColor = ''
+      document.querySelector(`.cpaper`).style.backgroundColor = 'black'
+      document.querySelector(`.cscissors`).style.backgroundColor = ''
+    }
+
+    if (compMove == 'scissors') {
+      document.querySelector(`.crock`).style.backgroundColor = ''
+      document.querySelector(`.cpaper`).style.backgroundColor = ''
+      document.querySelector(`.cscissors`).style.backgroundColor = 'black'
+    }
+
+
+  }
+
+
 
   function handleRock() {
     let random = Math.round(Math.random() * 2);
 
     if (random == 0) {
+      updateStyles('rock')
       evalScore('draw')
     }
 
     if (random == 1) {
+      updateStyles('paper')
       evalScore('loose')
     }
 
     if (random == 2) {
+      updateStyles('scissors')
       evalScore('win')
     }
 
@@ -66,13 +94,16 @@ else{
     let random = Math.round(Math.random() * 2);
 
     if (random == 0) {
+      updateStyles('rock')
       evalScore('win')
     }
 
     if (random == 1) {
+      updateStyles('paper')
       evalScore('draw')
     }
     if (random == 2) {
+      updateStyles('scissors')
       evalScore('loose')
     }
 
@@ -84,13 +115,16 @@ else{
     let random = Math.round(Math.random() * 2);
 
     if (random == 0) {
+      updateStyles('rock')
       evalScore('loose')
     }
 
     if (random == 1) {
+      updateStyles('paper')
       evalScore('win')
     }
     if (random == 2) {
+      updateStyles('scissors')
       evalScore('draw')
     }
 
@@ -119,8 +153,8 @@ else{
 
         <div className=' w-[15rem] h-fit lg:h-full  rounded-lg flex flex-col justify-center items-center'>
 
-        <Link to='/'>
-  <button class="button-89 m-3" role="button">Back</button></Link>
+          <Link to='/'>
+            <button className="button-89 m-3" role="button">Back</button></Link>
 
           <h1 className='font text-white text-[1.5rem] lg:text-[2.5rem] text-nowrap'>{displayText}</h1>
 
@@ -132,9 +166,9 @@ else{
 
         <div className='playSec compBg w-[15rem] lg:w-[20rem] h-fit lg:h-full bg-black rounded-lg'>
 
-          <div className='iconC h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>🤛</div>
-          <div className='iconC h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>✋</div>
-          <div className='iconC h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>✌️</div>
+          <div className='rounded-lg crock iconC h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>🤛</div>
+          <div className='rounded-lg cpaper iconC h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>✋</div>
+          <div className='rounded-lg cscissors iconC h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>✌️</div>
 
         </div>
 
