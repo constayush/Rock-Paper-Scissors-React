@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom/dist/react-router-dom.development'
 function Play() {
 
   let [playCred, setplayCred] = useState(0)
@@ -101,36 +102,39 @@ else{
 
 
   return (
-    <div className='Play w-screen h-screen flex justify-center items-center p-[8rem]'>
+    <div className='Play w-screen h-fit lg:h-screen flex  justify-center items-center p-[8rem]'>
 
 
-      <div className='w-[80rem] h-[40rem]  flex justify-between items-center '>
+      <div className='w-[80rem] h-fit lg:h-[40rem] lg:flex-row flex-col flex justify-between items-center '>
 
-        <div className='playSec huBg w-[20rem] h-full bg-black rounded-lg'>
+        <div className='playSec huBg w-[20rem] h-fit lg:h-full bg-black rounded-lg'>
 
-          <div onClick={handleClick} className='icon h-[33%] w-full text-[8rem] flex justify-center items-center'>🤜</div>
-          <div onClick={handleClick} className='icon h-[33%] w-full text-[8rem] flex justify-center items-center'>✋</div>
-          <div onClick={handleClick} className='icon h-[33%] w-full text-[8rem] flex justify-center items-center'>✌️</div>
-
-        </div>
-
-
-
-        <div className=' w-[30rem] h-full  rounded-lg flex flex-col justify-center items-center'>
-
-          <h1 className='font text-white text-[2.5rem] text-nowrap'>{displayText}</h1>
-
-          <div className='scoreCounter font text-white  text-nowrap flex flex-col justify-center items-center'><p className='text-[2.5rem]'>score is :-</p><h1 className='text-[3.5rem]'>{userScore}-{compScore}</h1></div>
+          <div onClick={handleClick} className='icon h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>🤜</div>
+          <div onClick={handleClick} className='icon h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>✋</div>
+          <div onClick={handleClick} className='icon h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>✌️</div>
 
         </div>
 
 
 
-        <div className='playSec compBg w-[20rem] h-full bg-black rounded-lg'>
+        <div className=' w-[30rem] h-fit lg:h-full  rounded-lg flex flex-col justify-center items-center'>
 
-          <div className='iconC h-[33%] w-full text-[8rem] flex justify-center items-center'>🤛</div>
-          <div className='iconC h-[33%] w-full text-[8rem] flex justify-center items-center'>✋</div>
-          <div className='iconC h-[33%] w-full text-[8rem] flex justify-center items-center'>✌️</div>
+        <Link to='/'>
+  <button class="button-89 m-3" role="button">Back</button></Link>
+
+          <h1 className='font text-white text-[1.5rem] lg:text-[2.5rem] text-nowrap'>{displayText}</h1>
+
+          <div className='scoreCounter font text-white  text-nowrap flex flex-col justify-center items-center'><p className='text-[1.5rem] lg:text-[2.5rem]'>score is :-</p><h1 className='text-[2rem] lg:text-[3.5rem]'>{userScore}-{compScore}</h1></div>
+
+        </div>
+
+
+
+        <div className='playSec compBg w-[20rem] h-fit lg:h-full bg-black rounded-lg'>
+
+          <div className='iconC h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>🤛</div>
+          <div className='iconC h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>✋</div>
+          <div className='iconC h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>✌️</div>
 
         </div>
 
