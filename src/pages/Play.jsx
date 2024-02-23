@@ -107,7 +107,7 @@ else{
 
       <div className='w-[80rem] h-fit lg:h-[40rem] lg:flex-row flex-col flex justify-between items-center '>
 
-        <div className='playSec huBg w-[20rem] h-fit lg:h-full bg-black rounded-lg'>
+        <div className='playSec huBg w-[15rem] lg:w-[20rem] h-fit lg:h-full bg-black rounded-lg'>
 
           <div onClick={handleClick} className='icon h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>🤜</div>
           <div onClick={handleClick} className='icon h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>✋</div>
@@ -130,7 +130,7 @@ else{
 
 
 
-        <div className='playSec compBg w-[20rem] h-fit lg:h-full bg-black rounded-lg'>
+        <div className='playSec compBg w-[15rem] lg:w-[20rem] h-fit lg:h-full bg-black rounded-lg'>
 
           <div className='iconC h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>🤛</div>
           <div className='iconC h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>✋</div>
