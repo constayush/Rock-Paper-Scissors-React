@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom/dist/react-router-dom.development'
+import { Link } from 'react-router-dom'
 function Play() {
 
   let [playCred, setplayCred] = useState(0)
