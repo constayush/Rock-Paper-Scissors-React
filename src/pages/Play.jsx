@@ -1,13 +1,13 @@
 import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 function Play() {
-
+let loco = useLocation();
   let [playCred, setplayCred] = useState(0)
   let [userScore, setUserScore] = useState(0)
   let [compScore, setCompScore] = useState(0)
-  let random = Math.round(Math.random() * 2);
-  let bestof = 3;
+  let bestof = loco.state;
   let [displayText, setDisplayText] = useState('choose your move')
   function handleClick(e) {
 

@@ -1,6 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 function Home() {
+
+let [selectText, setSelectText] = useState("select no. of rounds")
+let [bestof, setBestof] = useState(1)
+
+
+  function handleClick(e){
+    setBestof(Number(e.target.innerText))
+    setSelectText(`no. of rounds ${e.target.innerText}`)
+  }
+
+
   return (
     <div className='Home w-screen h-screen flex flex-col justify-between items-center p-[8rem]' >
 
@@ -16,18 +28,18 @@ function Home() {
         <h1 className='font font-bold text-[1.8rem] text-[white]'>Best of?</h1>
 
         <div className='flex gap-2'>
-          <div className='bestOfBtn text-white text-[1.8rem] font-bold border-[1px] rounded-full w-[3rem] h-[3rem] flex items-center justify-center'>1</div>
-          <div className='bestOfBtn text-white text-[1.8rem] font-bold border-[1px] rounded-full w-[3rem] h-[3rem] flex items-center justify-center'>3</div>
-          <div className='bestOfBtn text-white text-[1.8rem] font-bold border-[1px] rounded-full w-[3rem] h-[3rem] flex items-center justify-center'>5</div>
-          <div className='bestOfBtn text-white text-[1.8rem] font-bold border-[1px] rounded-full w-[3rem] h-[3rem] flex items-center justify-center'>7</div>
-          <div className='bestOfBtn text-white text-[1.8rem] font-bold border-[1px] rounded-full w-[3rem] h-[3rem] flex items-center justify-center'>10</div>
+          <button onClick={handleClick} className='bestOfBtn text-white text-[1.8rem] font-bold border-[1px] rounded-full w-[3rem] h-[3rem] flex items-center justify-center'>1</button>
+          <button onClick={handleClick} className='bestOfBtn text-white text-[1.8rem] font-bold border-[1px] rounded-full w-[3rem] h-[3rem] flex items-center justify-center'>3</button>
+          <button onClick={handleClick} className='bestOfBtn text-white text-[1.8rem] font-bold border-[1px] rounded-full w-[3rem] h-[3rem] flex items-center justify-center'>5</button>
+          <button onClick={handleClick} className='bestOfBtn text-white text-[1.8rem] font-bold border-[1px] rounded-full w-[3rem] h-[3rem] flex items-center justify-center'>7</button>
+          <button onClick={handleClick} className='bestOfBtn text-white text-[1.8rem] font-bold border-[1px] rounded-full w-[3rem] h-[3rem] flex items-center justify-center'>10</button>
         </div>
       </div>
 
+<p className='font text-white text-[1rem] text-nowrap lg:text-[1.4rem]'>{selectText}</p>
 
-
-      <Link to='/play'><div className='playBtn text-[1.5rem] border-[1px] p-4 font-bold'>
-        <button>
+      <Link state={bestof} to='/play'><div className='playBtn text-[1.5rem] border-[1px] p-4 font-bold'>
+        <button className='Pbutton'>
           <div className="text">
             <span>Play</span>
 
@@ -56,7 +68,7 @@ function Home() {
         </button>
       </div></Link>
 
-<p className='text-white text-nowrap'>made by ayush ^_____^</p>
+<a href='https://www.github.com/constayush' target='_ablank'><p className='text-white text-nowrap'>made by ayush ^_____^</p></a>
 
 
     </div>
