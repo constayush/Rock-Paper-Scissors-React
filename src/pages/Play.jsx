@@ -139,7 +139,7 @@ let loco = useLocation();
     <div className='Play w-screen h-fit lg:h-screen flex flex-col lg:flex-row justify-center items-center p-[8rem]'>
 
 
-      <div className='w-[80rem] h-fit lg:h-[40rem] lg:flex-row flex-row  gap-[1.5rem] justify-between items-center '>
+      <div className='w-fit h-fith-fit lg:h-[40rem] lg:flex-row flex-row  gap-[1.5rem] justify-between items-center '>
 
         <div className='playSec huBg w-[7rem] lg:w-[20rem] h-fit lg:h-full bg-black rounded-lg'>
 
