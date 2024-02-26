@@ -136,7 +136,7 @@ let loco = useLocation();
 
 
   return (
-    <div className='Play w-screen h-fit lg:h-screen flex flex-col lg:flex-row justify-center items-center p-[8rem]'>
+    <div className='Play w-screen h-screen lg:h-screen flex flex-col lg:flex-row justify-center items-center p-[8rem]'>
 
 
       <div className='w-fit h-fith-fit lg:h-[40rem] flex lg:flex-row flex-row  gap-[1.5rem] justify-between items-center '>
@@ -151,8 +151,10 @@ let loco = useLocation();
 
 
 
+      
         <div className='hidden lg:visible scoreCounter font text-white  text-nowrap flex flex-col justify-center items-center'>
-  <p className='text-[1.5rem] lg:text-[2.5rem]'>score is :-</p>
+ <h1 className='font text-white text-[1.2rem] lg:text-[2.5rem] text-nowrap'>{displayText}</h1>
+          <p className='text-[1.5rem] lg:text-[2.5rem]'>score is :-</p>
   <h1 className='text-[2rem] lg:text-[3.5rem]'>{userScore}-{compScore}</h1>
 </div>
 
@@ -171,6 +173,7 @@ let loco = useLocation();
       </div>
 
 <div className='visible lg:hidden scoreCounter font text-white  text-nowrap flex flex-col justify-center items-center'>
+  <h1 className='font text-white text-[1.2rem] lg:text-[2.5rem] text-nowrap'>{displayText}</h1>
   <p className='text-[1.5rem] lg:text-[2.5rem]'>score is :-</p>
   <h1 className='text-[2rem] lg:text-[3.5rem]'>{userScore}-{compScore}</h1>
 </div>
