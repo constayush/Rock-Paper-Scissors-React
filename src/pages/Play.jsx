@@ -29,8 +29,18 @@ let loco = useLocation();
   }
 
   function evalScore(result) {
-    if (playCred >= bestof) { setDisplayText("limit reached") }
-    else {
+    if (playCred >= bestof){
+
+      if(userScore > compScore) { setDisplayText("limit reached, you WON!") }
+
+        
+      if(userScore < compScore) { setDisplayText("limit reached, you Loose!") }
+
+      
+      if(userScore == compScore) { setDisplayText("limit reached, its a draw!") }
+
+      
+    } else {
       if (result == 'draw') { setDisplayText("snap!, its a draw") }
       else if (result == 'win') {
         setDisplayText("you win, choose next")
