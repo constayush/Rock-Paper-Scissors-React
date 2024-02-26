@@ -151,12 +151,12 @@ let loco = useLocation();
 
 
 
-        <div className=' w-[7rem] h-fit lg:h-full  rounded-lg flex flex-col justify-center items-center'>
+        <div className=' w-[2rem] h-fit lg:h-full  rounded-lg flex flex-col justify-center items-center'>
 
           <Link to='/'>
             <button className="button-89 m-3" role="button">Back</button></Link>
 
-          <h1 className='font text-white text-[1.5rem] lg:text-[2.5rem] text-nowrap'>{displayText}</h1>
+          <h1 className='font text-white text-[1.2rem] lg:text-[2.5rem] text-nowrap'>{displayText}</h1>
 
           <div className='scoreCounter font text-white  text-nowrap flex flex-col justify-center items-center'><p className='text-[1.5rem] lg:text-[2.5rem]'>score is :-</p><h1 className='text-[2rem] lg:text-[3.5rem]'>{userScore}-{compScore}</h1></div>
 
@@ -164,7 +164,7 @@ let loco = useLocation();
 
 
 
-        <div className='playSec compBg w-[15rem] lg:w-[20rem] h-fit lg:h-full bg-black rounded-lg'>
+        <div className='playSec compBg w-[7rem] lg:w-[20rem] h-fit lg:h-full bg-black rounded-lg'>
 
           <div className='rounded-lg crock iconC h-[33%] w-full text-[3rem] lg:text-[8rem] flex justify-center items-center'>🤛</div>
           <div className='rounded-lg cpaper iconC h-[33%] w-full text-[3rem] lg:text-[8rem] flex justify-center items-center'>✋</div>
