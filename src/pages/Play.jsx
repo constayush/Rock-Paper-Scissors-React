@@ -151,7 +151,7 @@ let loco = useLocation();
 
 
 
-        <div className=' w-[2rem] h-fit lg:h-full  rounded-lg flex flex-col justify-center items-center'>
+        <div className='hidden lg:visible w-[2rem] h-fit lg:h-full  rounded-lg flex flex-col justify-center items-center'>
 
           <Link to='/'>
             <button className="button-89 m-3" role="button">Back</button></Link>
@@ -171,6 +171,31 @@ let loco = useLocation();
           <div className='rounded-lg cscissors iconC h-[33%] w-full text-[3rem] lg:text-[8rem] flex justify-center items-center'>✌️</div>
 
         </div>
+
+<div className='visible lg:hidden  w-[2rem] h-fit lg:h-full  rounded-lg flex flex-col justify-center items-center'>
+
+          <Link to='/'>
+            <button className="button-89 m-3" role="button">Back</button></Link>
+
+          <h1 className='font text-white text-[1.2rem] lg:text-[2.5rem] text-nowrap'>{displayText}</h1>
+
+          <div className='scoreCounter font text-white  text-nowrap flex flex-col justify-center items-center'><p className='text-[1.5rem] lg:text-[2.5rem]'>score is :-</p><h1 className='text-[2rem] lg:text-[3.5rem]'>{userScore}-{compScore}</h1></div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       </div>
 
