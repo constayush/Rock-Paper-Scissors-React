@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 function Play() {
-let loco = useLocation();
+  let loco = useLocation();
   let [playCred, setplayCred] = useState(0)
   let [userScore, setUserScore] = useState(0)
   let [compScore, setCompScore] = useState(0)
@@ -29,17 +29,17 @@ let loco = useLocation();
   }
 
   function evalScore(result) {
-    if (playCred >= bestof){
+    if (playCred >= bestof) {
 
-      if(userScore > compScore) { setDisplayText("limit reached, you WON!") }
+      if (userScore > compScore) { setDisplayText("limit reached, you WON!") }
 
-        
-      if(userScore < compScore) { setDisplayText("limit reached, you Loose!") }
 
-      
-      if(userScore == compScore) { setDisplayText("limit reached, its a draw!") }
+      if (userScore < compScore) { setDisplayText("limit reached, you Loose!") }
 
-      
+
+      if (userScore == compScore) { setDisplayText("limit reached, its a draw!") }
+
+
     } else {
       if (result == 'draw') { setDisplayText("snap!, its a draw") }
       else if (result == 'win') {
@@ -161,16 +161,15 @@ let loco = useLocation();
 
 
 
-       
-        <div className='hidden lg:visible scoreCounter font text-white  text-nowrap flex flex-col justify-center items-center'>
- <h1 className='font text-white text-[1.2rem] lg:text-[2.5rem] text-nowrap'>{displayText}</h1>
+
+        <div className='hidden scoreCounter font text-white  text-nowrap lg:flex flex-col justify-center items-center '>
+
+          <h1 className='font text-white text-[1.2rem] lg:text-[2.5rem] text-nowrap'>{displayText}</h1>
           <p className='text-[1.5rem] lg:text-[2.5rem]'>score is :-</p>
-  <h1 className='text-[2rem] lg:text-[3.5rem]'>{userScore}-{compScore}</h1>
-<Link className='hidden lg:visible' to='/'>
+          <h1 className='text-[2rem] lg:text-[3.5rem]'>{userScore}-{compScore}</h1>
+          <Link className='hidden lg:block' to='/'>
             <button className="button-89 m-3" role="button">Back</button></Link>
 
-      
-        
         </div>
 
 
@@ -187,15 +186,15 @@ let loco = useLocation();
 
       </div>
 
-<div className='visible lg:hidden scoreCounter font text-white  text-nowrap flex flex-col justify-center items-center'>
-  <h1 className='font text-white text-[1.2rem] lg:text-[2.5rem] text-nowrap'>{displayText}</h1>
-  <p className='text-[1.5rem] lg:text-[2.5rem]'>score is :-</p>
-  <h1 className='text-[2rem] lg:text-[3.5rem]'>{userScore}-{compScore}</h1>
-<Link className='hidden lg:visible' to='/'>
-            <button className="button-89 m-3" role="button">Back</button></Link>
+      <div className=' lg:hidden scoreCounter font text-white  text-nowrap flex flex-col justify-center items-center mt-[1rem]'>
+        <h1 className='font text-white text-[1.2rem] lg:text-[2.5rem] text-nowrap'>{displayText}</h1>
+        <p className='text-[1.5rem] lg:text-[2.5rem]'>score is :-</p>
+        <h1 className='text-[2rem] lg:text-[3.5rem]'>{userScore}-{compScore}</h1>
+        <Link className=' lg:hidden' to='/'>
+          <button className="button-89 m-3" role="button">Back</button>
+        </Link>
 
-      
-</div>
+      </div>
 
     </div>
   )
