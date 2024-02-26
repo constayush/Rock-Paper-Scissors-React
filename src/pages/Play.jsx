@@ -136,7 +136,7 @@ let loco = useLocation();
 
 
   return (
-    <div className='Play w-screen h-fit lg:h-screen flex  justify-center items-center p-[8rem]'>
+    <div className='Play w-screen h-fit lg:h-screen flex flex-col lg:flex-row justify-center items-center p-[8rem]'>
 
 
       <div className='w-[80rem] h-fit lg:h-[40rem] lg:flex-row flex-row flex justify-between items-center '>
