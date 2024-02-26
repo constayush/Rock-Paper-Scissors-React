@@ -151,7 +151,10 @@ let loco = useLocation();
 
 
 
-        
+        <div className='hidden lg:visible scoreCounter font text-white  text-nowrap flex flex-col justify-center items-center'>
+  <p className='text-[1.5rem] lg:text-[2.5rem]'>score is :-</p>
+  <h1 className='text-[2rem] lg:text-[3.5rem]'>{userScore}-{compScore}</h1>
+</div>
 
 
 
@@ -167,7 +170,10 @@ let loco = useLocation();
 
       </div>
 
-
+<div className='visible lg:hidden scoreCounter font text-white  text-nowrap flex flex-col justify-center items-center'>
+  <p className='text-[1.5rem] lg:text-[2.5rem]'>score is :-</p>
+  <h1 className='text-[2rem] lg:text-[3.5rem]'>{userScore}-{compScore}</h1>
+</div>
 
     </div>
   )
