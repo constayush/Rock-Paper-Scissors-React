@@ -139,19 +139,19 @@ let loco = useLocation();
     <div className='Play w-screen h-fit lg:h-screen flex  justify-center items-center p-[8rem]'>
 
 
-      <div className='w-[80rem] h-fit lg:h-[40rem] lg:flex-row flex-col flex justify-between items-center '>
+      <div className='w-[80rem] h-fit lg:h-[40rem] lg:flex-row flex-row flex justify-between items-center '>
 
-        <div className='playSec huBg w-[15rem] lg:w-[20rem] h-fit lg:h-full bg-black rounded-lg'>
+        <div className='playSec huBg w-[7rem] lg:w-[20rem] h-fit lg:h-full bg-black rounded-lg'>
 
-          <div onClick={handleClick} className='icon h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>🤜</div>
-          <div onClick={handleClick} className='icon h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>✋</div>
-          <div onClick={handleClick} className='icon h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>✌️</div>
+          <div onClick={handleClick} className='icon h-[33%] w-full text-[3rem] lg:text-[8rem] flex justify-center items-center'>🤜</div>
+          <div onClick={handleClick} className='icon h-[33%] w-full text-[3rem] lg:text-[8rem] flex justify-center items-center'>✋</div>
+          <div onClick={handleClick} className='icon h-[33%] w-full text-[3rem] lg:text-[8rem] flex justify-center items-center'>✌️</div>
 
         </div>
 
 
 
-        <div className=' w-[15rem] h-fit lg:h-full  rounded-lg flex flex-col justify-center items-center'>
+        <div className=' w-[7rem] h-fit lg:h-full  rounded-lg flex flex-col justify-center items-center'>
 
           <Link to='/'>
             <button className="button-89 m-3" role="button">Back</button></Link>
@@ -166,9 +166,9 @@ let loco = useLocation();
 
         <div className='playSec compBg w-[15rem] lg:w-[20rem] h-fit lg:h-full bg-black rounded-lg'>
 
-          <div className='rounded-lg crock iconC h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>🤛</div>
-          <div className='rounded-lg cpaper iconC h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>✋</div>
-          <div className='rounded-lg cscissors iconC h-[33%] w-full text-[5rem] lg:text-[8rem] flex justify-center items-center'>✌️</div>
+          <div className='rounded-lg crock iconC h-[33%] w-full text-[3rem] lg:text-[8rem] flex justify-center items-center'>🤛</div>
+          <div className='rounded-lg cpaper iconC h-[33%] w-full text-[3rem] lg:text-[8rem] flex justify-center items-center'>✋</div>
+          <div className='rounded-lg cscissors iconC h-[33%] w-full text-[3rem] lg:text-[8rem] flex justify-center items-center'>✌️</div>
 
         </div>
 
